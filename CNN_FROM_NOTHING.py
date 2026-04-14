@@ -112,6 +112,10 @@ for epoch in range(0,25):
         bias3 = bias3 - learningrate * np.sum(dlossbydlayer3, axis=0)
         bias2 = bias2 - learningrate * np.sum(dlossbydlayer2,axis=0)
         bias1 = bias1 - learningrate * np.sum(dlossbylayer1,axis=0)
+        # Backpropagation till the weights of MLP is done 
+        # Mainly what's left is the backpropagation till the convo filters which is extremely tiring to do 
+        #on your own so I am leaving this right now as i don't really want to waste time on this but i will complete this after ETE . MAYBE
+
         print("batch ",i)
     print(np.mean(losss))
 
